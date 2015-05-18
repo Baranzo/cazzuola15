@@ -1,0 +1,52 @@
+ 
+.copertina { 
+  width: 100%; 
+  height: 500px;
+  float: left; 
+  margin-top: 0px; 
+  margin-right: 0px;
+  margin-bottom: 50px;
+  margin-left: 0px;
+  }
+  
+  
+  
+  .titolo {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    font-family: verdana, arial;
+    font-size: 30px;
+  }
+  
+  .testo {
+    margin-top: 0px;
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-bottom: 0px;
+    font-family: verdana, arial;
+    font-size: 15px;
+    text-align: justify;
+  }
+  
+  
+  
+  
+  .centro {
+    background-color: white;
+    margin-top: 0px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 0px;
+    padding-top: 50px; 
+    
+  }
+  
+  body {
+		
+		background-image: url("../immagini/bg.jpg");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+    
