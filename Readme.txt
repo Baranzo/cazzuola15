@@ -11,3 +11,13 @@
 
 
 -Se avete commenti/cazziate, prontissimo ad ascoltarle :)
+
+
+2) 
+- iniziato a scalare per dispositivi mobili (layout a colonne)
+- "hamburger" ok se riducete dimensione finestra
+- bug di mirko risolto (testato su ff e chrome, da vedere icew&IE&safari)
+- iniziato menu laterale
+- sistemato qualche stile
+- CORRETTO IL NOME MIRCO IN MIRKO (cit. necessaria)
+- domani continuo con il menu laterale 
