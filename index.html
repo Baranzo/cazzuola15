@@ -18,25 +18,24 @@
 	
 
 
-
+<!--Inizio Navigation Bar-->
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><!--Hamburger-->
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
+        <span class="icon-bar"></span><!--Righe dell'hamburger quando collassa-->
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <!--<a class="navbar-brand" href="index.html">Home</a>-->
+      <!--<a class="navbar-brand" href="ICONA GRUPPO">Home</a>-->
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Ogni li (principale) finirà in una riga sopra quando collassa -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 	<li class="active"><a href="#"> Home </a></li>
-        
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gruppo Raschietto <b class="caret"></b></a>
           <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
@@ -74,16 +73,15 @@
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
-</nav>
+</nav><!-- chiusura navbar-->
 
 
-<!--Jumboitron(Bootstrap), eventualmente si sostituisce con Iphrame. Classe centro su css -->  
-
-<div class="row">
-  <div class="col-sm-3">
+<!-- Inizio Corpo pagina-->
+<div class="row"><!--Il row è suddiviso in 12 unità per facilitare lo split desktop/mobile-->
+  <div class="col-sm-3"><!--La "colonna" sinistra. Attualmente inutilizzata-->
   </div>
-  <div class="col-sm-6">
-  <div class="menu">
+  <div class="col-sm-6"><!--"Colonna" centrale, con testo. Ci possiamo inserire l'iphrame-->
+  <div class="back">
     <p class="titolo"> Ciao, questo è un titolo di prova:
   <div class="testo"> Iste quidem veteres inter ponetur honeste, qui vel mense brevi vel toto est iunior anno. Utor permisso, caudaeque pilos ut equinae paulatim vello unum, demo etiam unum, dum cadat elusus ratione ruentis acervi, qui redit in fastos et annis miraturque.
 
@@ -128,14 +126,13 @@ Ennius et sapines et fortis et alter Homerus, ut critici dicunt, leviter curare 
 minimum distantia miror. Inter quae verbum emicuit si forte habet hos nisi numeratque poetas.
    </div>
    </div>
-   </div>
-  <div class="col-sm-3">
+   </div><!--chiusura colonna centrale-->
+  <div class="col-sm-3"> <!--colonna destra, con menù d'annotazione/lettura-->
   <div class="container">
   <div class="boxbox">
-  <div class="btn-group">
-  <button type="button" class="btn btn-default">Reader</button>
-  <button type="button" class="btn btn-default">Annotator</button>
-  <button type="button" class="btn btn-default">Bottone 3</button>
+  <div class="btn-group btn-group-lg" id="boh">
+  <button type="button" class="btn btn-primary">Reader</button>
+  <button type="button" class="btn btn-danger">Annotator</button>
   </div>
   </div>
   </div>
