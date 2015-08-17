@@ -41,7 +41,15 @@
     margin-left: 15%;
     margin-right: 15%;
   }
+ 
+ #fixedMenu {
+  position: fixed;
+  left: 80%;
+  right: 10;
+ }
   
+ #fixedContainer{
+ }
   .whiteButton {
     background-color: white;
   }
