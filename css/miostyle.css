@@ -36,10 +36,13 @@
   }
   
   .boxbox {
-    padding-top: 100px;
+    /*padding-top: 100px;
     margin: 0 auto;
     margin-left: 15%;
-    margin-right: 15%;
+    margin-right: 15%;*/
+      position: fixed;
+      right: 3%;
+      top: 10%;
   }
  
  #fixedMenu {
