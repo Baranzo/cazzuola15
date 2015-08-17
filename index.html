@@ -3,11 +3,6 @@
 	<head> <title> Pagina di prova </title>
 		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 		<link href="css/miostyle.css" rel="stylesheet" type="text/css">
-		
-		
-		
-		
-
 		<META NAME=“keyword” CONTENT=“prova, ci stiamo provando">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -128,12 +123,21 @@ minimum distantia miror. Inter quae verbum emicuit si forte habet hos nisi numer
    </div>
    </div><!--chiusura colonna centrale-->
   <div class="col-sm-3"> <!--colonna destra, con menù d'annotazione/lettura-->
-      <div class="boxbox">
-	<div class="btn-group btn-group-lg">
-	  <button type="button" class="btn btn-primary">Reader</button>
-	  <button type="button" class="btn btn-danger">Annotator</button>
-	</div>
-      </div>
+      <div class="boxbox">      
+      <!-- Nav tabs, bottoni -->
+	<ul class="nav nav-tabs" role="tablist">
+	  <li class="active"><a href="#reader" role="tab" data-toggle="tab">Reader</a></li>
+	  <li><a href="#annotator" role="tab" data-toggle="tab">Annotator</a></li>
+	</ul>
+
+      <!-- Tab panes, switch del contenuto -->
+	<div class="tab-content">
+	  <div class="tab-pane active" id="reader">Reader</div>
+	  <div class="tab-pane" id="annotator">Annotator</div>
+	</div><!--panes-->
+  
+  
+    </div><!--boxbox-->
   </div><!--chiusura colonna destra-->
 </div><!--chiusura menù-->
 

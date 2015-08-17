@@ -38,8 +38,14 @@
   .boxbox {
     padding-top: 100px;
     margin: 0 auto;
-    margin-left: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
   }
+  
+  .whiteButton {
+    background-color: white;
+  }
+  
   
   
   .centro {
