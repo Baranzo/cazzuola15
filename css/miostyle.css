@@ -36,22 +36,26 @@
   }
   
   .boxbox {
-    /*padding-top: 100px;
-    margin: 0 auto;
+    padding-top: 100px;
+    margin: auto;
     margin-left: 15%;
-    margin-right: 15%;*/
-      position: fixed;
-      right: 3%;
-      top: 10%;
+    margin-right: 15%;
   }
  
- #fixedMenu {
+  #fixedMenu {
+      position: fixed;
+      right: 7%;
+      top: 10%;
+      /*
   position: fixed;
   left: 80%;
-  right: 10;
+  right: 10;*/
  }
   
- #fixedContainer{
+  #fixedContainer{
+      position: fixed;
+      right: 17%;
+      top: 15%;
  }
   .whiteButton {
     background-color: white;
