@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//IT">
+
+<html>
+
+{% block head_block %}
+	<head> <title> {{ titolo_pagina }} </title>
+		<link href="static/css/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="static/css/miostyle.css" rel="stylesheet" type="text/css">
+		<META NAME=“keyword” CONTENT=“prova, ci stiamo provando">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+{% endblock %}
+
+{% block body_block %}
+<body>
+	
+	<script src="static/js/jquery-1.11.0.js"></script>
+	<script src="static/js/bootstrap.min.js"></script>
+
+<!--Inizio Navigation Bar-->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><!--Hamburger-->
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span><!--Righe dell'hamburger quando collassa-->
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!--<a class="navbar-brand" href="ICONA GRUPPO">Home</a>-->
+    </div>
+
+    <!-- Ogni li (principale) finirà in una riga sopra quando collassa -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+	<li class="active"><a href="#"> Home </a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gruppo Raschietto <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+	    <li><a href="#">Baranzoni Riccardo</a></li>
+            <li><a href="#">Bonesi Dario</a></li>
+            <li><a href="#">Mucaria Mirko</a></li>
+            <li><a href="#">Sgarbi Agnese</a></li>
+            
+            <li class="divider"></li>
+            
+            <li><a href="#">Eventuale Link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Eventuale Link2</a></li>
+          </ul>
+          
+        </li>
+       
+        <li><a href="#">About</a></li>
+        <li><a href="#">Help</a></li>
+       
+      </ul>
+      
+	<div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Log in</button>
+            <button type="submit" class="btn btn-success">Registrati</button>
+          </form>
+        </div>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav><!-- chiusura navbar-->
+
+<!-- Inizio Corpo pagina-->
+<div class="row"><!--Il row è suddiviso in 12 unità per facilitare lo split desktop/mobile-->
+  <div class="col-sm-3"><!--La "colonna" sinistra. Attualmente inutilizzata-->
+  </div>
+  <div class="col-sm-6"><!--"Colonna" centrale, con testo. Ci possiamo inserire l'iphrame-->
+  <div class="back">
+    <p class="titolo"> {{ titolo_testo }}
+  <div class="testo"> {{ testo }}</div>
+  
+</div>
+   </div><!--chiusura colonna centrale-->
+  <div class="col-sm-3"> <!--colonna destra, con menù d'annotazione/lettura-->
+      <div class="boxbox">      
+      <!-- Nav tabs, bottoni -->
+	<ul class="nav nav-tabs" id="fixedMenu" role="tablist">
+	  <li class="active"><a href="#reader" role="tab" data-toggle="tab">Reader</a></li>
+	  <li><a href="#annotator" role="tab" data-toggle="tab">Annotator</a></li>
+	</ul>
+
+      <!-- Tab panes, switch del contenuto -->
+	<div class="tab-content" id="fixedContainer">
+	  <div class="tab-pane active" id="reader">
+	    <select class="form-control">
+	      <option value="one">Doc1</option>
+	      <option value="two">Doc2</option>
+	      <option value="three">Doc3</option>
+	      <option value="four">Blsdjaodijaoidjoiuyiuyiyiuyiuyiuy</option>
+	      <option value="five">Doc5</option>
+	    </select>
+	    <div class="checkbox">
+	      <h3><label class="label label-info"><input type="checkbox" value="">Annotazione 1 (AUTO)</label>
+	    </div>
+	    <div class="checkbox">
+	      <h3><label class="label label-primary"><input type="checkbox" value="">Annot. 2</label>
+	    </div>
+	    <div class="checkbox disabled">
+	      <h3><label class="label label-danger"><input type="checkbox" value="" disabled>Annotazione disabilitata</label>
+	    </div>
+	  </div><!--reader-->
+	  <div class="tab-pane" id="annotator">
+	  <select class="form-control">
+	      <option value="one">Doc1</option>
+	      <option value="two">Doc2</option>
+	      <option value="three">Doc3</option>
+	      <option value="four">Blsdjaodijaoidjoiuyiuyiyiuyiuyiuy</option>
+	      <option value="five">Doc5</option>
+	    </select>
+	    <div class="checkbox">
+	      <h3><label class="label label-info"><input type="checkbox" value="">Annotazione 1 (AUTO)</label>
+	    </div>
+	    <div class="checkbox">
+	      <h3><label class="label label-primary"><input type="checkbox" value="">Annot. 2</label>
+	    </div>
+	    <div class="checkbox disabled">
+	      <h3><label class="label label-danger"><input type="checkbox" value="" disabled>Annotazione disabilitata</label>
+	    </div>
+	    <div class="minibox">
+	    <button type="button" class="btn btn-primary btn-lg">New</button>
+	    <button type="button" class="btn btn-danger btn-lg">Edit</button></div>
+	    <div class="minibox"><button type="button" class="btn btn-warning btn-lg">Save All</button></div>
+	  </div><!--annotator-->
+	</div><!--panes-->
+  
+  
+    </div><!--boxbox-->
+  </div><!--chiusura colonna destra-->
+</div><!--chiusura menù-->
+
+</body>
+{% endblock %}
+
+</html>
