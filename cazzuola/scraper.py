@@ -4,7 +4,6 @@ import requests
 from lxml import html
 
 
-
 def get_dlib_doc_list():
 
     doc_list = []
@@ -30,6 +29,7 @@ def get_dlib_doc_list():
 
     return doc_list
 
+
 def get_dlib_doc_list_xpath():
 
     doc_list = []
@@ -51,3 +51,8 @@ def get_dlib_doc_list_xpath():
         doc_list.append(dict)
 
     return doc_list
+
+
+def get_doc_list():
+
+    return get_dlib_doc_list()
