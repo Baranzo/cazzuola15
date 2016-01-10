@@ -18,3 +18,10 @@ def doc_list(request):
 
     return HttpResponse(data, content_type='application/json')
 
+def doc_request(request):
+
+    doc_url = request.POST.keys()[0]
+
+
+
+    #return HttpResponse(doc_body

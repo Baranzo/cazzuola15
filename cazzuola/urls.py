@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.index, name='index'),
 
-    url(r'^get_doc_list$', views.doc_list, name='doc_list')
+    url(r'^get_doc_list$', views.doc_list, name='doc_list'),
+    url(r'^doc_request$', views.doc_request, name='doc_request')
 ]
