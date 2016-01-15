@@ -58,6 +58,6 @@ def get_doc_list():
     return get_dlib_doc_list()
 
 
-def get_doc_body(url):
+#def get_doc_body(url):
 
 
