@@ -39,19 +39,30 @@ window.onload = function()
     console.log(doc_list);
 }
 
-var doc_viewer = function (doc_n)
+var doc_request = function ( doc_n )
 {
     var doc_url = doc_array[ doc_n ][ 'url' ];
 
     $.ajax({
         url: 'doc_request',
         method: 'POST',
-        data: JSON.stringify( doc_url ),
+        data: {'url': doc_url },
         beforeSend: function(xhr, settings) {
             xhr.setRequestHeader("X-CSRFToken", csrftoken);
-        }
+        },
+        success: doc_viewer
     });
 }
+
+
+var doc_viewer = function ( data )
+{
+    data = JSON.parse(data);
+    $( '#doc_viewer' ).empty();
+    $( '#doc_viewer' ).append( '<h1>' + data['title'] + '</h1>' );
+    $( '#doc_viewer' ).append( data['body'] );
+}
+
 
 /*
  * Prende i dati del server relativi alla lista dei documenti e li inserisce nella pagina
@@ -79,6 +90,6 @@ var fill_doc_list = function (data)
         $( this ).attr( 'class', 'active' );
         current_doc = $( this ).attr( 'id' );
 
-        doc_viewer( current_doc );
+        doc_request( current_doc );
     });
 }

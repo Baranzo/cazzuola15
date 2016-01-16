@@ -2,11 +2,13 @@ import json
 
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_protect
 
 from models import Document
-from scraper import get_doc_list
+from scraper import get_doc_list, get_doc_body
 
 
+@csrf_protect
 def index(request):
 
     return render(request, 'base.html')
@@ -42,8 +44,13 @@ def doc_list(request):
     return HttpResponse(data, content_type='application/json')
 
 
+@csrf_protect
 def doc_request(request):
 
-    doc_url = request.POST.keys()[0]
+    doc_url = request.POST['url']
 
-    #return HttpResponse(doc_body
+    doc_body = get_doc_body(doc_url)
+    print type(doc_body)
+    doc_body = json.dumps(doc_body)
+
+    return HttpResponse(doc_body, content_type='text/html')

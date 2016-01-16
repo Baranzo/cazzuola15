@@ -58,6 +58,19 @@ def get_doc_list():
     return get_dlib_doc_list()
 
 
-#def get_doc_body(url):
+def get_doc_body(url):
 
+    data = {}
+
+    page = urllib2.urlopen(url)
+    page = page.read()
+
+    soup = BeautifulSoup(page, 'lxml')
+
+    soup.div.decompose()
+
+    data['body'] = str(soup.body)
+    data['title'] = str(soup.head.title.text)
+
+    return data
 
