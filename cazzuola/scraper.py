@@ -67,7 +67,23 @@ def get_doc_body(url):
 
     soup = BeautifulSoup(page, 'lxml')
 
-    soup.div.decompose()
+    if soup.div:
+        soup.div.decompose()
+
+    imgs = soup.find_all('img')
+
+    for tag in imgs:
+        tag.decompose()
+
+    tags = soup.select('#navtable')
+    if len(tags):
+        for tag in tags:
+            tag.decompose()
+
+    tags = soup.select('#bannertable')
+    if len(tags):
+        for tag in tags:
+            tag.decompose()
 
     data['body'] = str(soup.body)
     data['title'] = str(soup.head.title.text)

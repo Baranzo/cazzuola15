@@ -69,6 +69,8 @@ var doc_viewer = function ( data )
  */
 var fill_doc_list = function (data)
 {
+    $( '#doc_list' ).empty();
+
     for( var document in data )
     {
         var tag = $( doc_tag );
@@ -84,6 +86,7 @@ var fill_doc_list = function (data)
 
     $( $( '#doc_list' ).children()[0] ).attr( 'class', 'active' );
     current_doc = 0;
+    doc_request( current_doc );
 
     $( '#doc_list li' ).on( 'click', function() {
         $( '#' + current_doc ).attr('class', '');

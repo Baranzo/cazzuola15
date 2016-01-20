@@ -50,7 +50,6 @@ def doc_request(request):
     doc_url = request.POST['url']
 
     doc_body = get_doc_body(doc_url)
-    print type(doc_body)
     doc_body = json.dumps(doc_body)
 
     return HttpResponse(doc_body, content_type='text/html')
